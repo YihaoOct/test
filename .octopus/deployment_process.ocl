@@ -4,11 +4,11 @@ step "run-a-script" {
         Octopus.Action.TargetRoles = "azure-web-app"
     }
 
-    action {
+    action "my-step" {
         action_type = "Octopus.Script"
         properties = {
             Octopus.Action.RunOnServer = "false"
-            Octopus.Action.Script.ScriptBody = "echo hello"
+            Octopus.Action.Script.ScriptBody = "echo hello!"
             Octopus.Action.Script.ScriptSource = "Inline"
             Octopus.Action.Script.Syntax = "PowerShell"
         }
